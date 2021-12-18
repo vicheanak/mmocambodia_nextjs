@@ -43,8 +43,8 @@ export default function Layout({ children, home }) {
             <div class="flex justify-between">
               <div class="flex space-x-4">
                 <div>
-                  <a href="#" class="flex items-center py-5 py-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <a href="#" class="flex items-center py-5 px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-400 h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                     </svg>
                     <span class="font-bold">MMO Cambodia</span>
@@ -52,14 +52,27 @@ export default function Layout({ children, home }) {
                 </div>
                 {/* Primary */}
                 <div class="hidden md:flex items-center space-x-4">
-                  <a href="" class="py-5 px-3 text-gray-700 hover:text-gray-900">Facebook</a>
-                  <a href="" class="py-5 px-3 text-gray-700 hover:text-gray-900">YouTube</a>
+                  <Link href="facebook">
+                    <a class="py-5 px-3 text-blue-700 hover:text-blue-900 font-bold">
+                      Facebook
+                    </a>
+                  </Link>
+                  <Link href="facebook">
+                    <a class="py-5 px-3 text-red-700 hover:text-red-900 font-bold">
+                      YouTube
+                    </a>
+                  </Link>
+                  <Link href="facebook">
+                    <a class="py-5 px-3 text-green-700 hover:text-green-900 font-bold">
+                      Crypto
+                    </a>
+                  </Link>
                 </div>
               </div>
               {/* Seconday */}
               <div class="hidden md:flex items-center space-x-4">
-                <a href="" class="py-5 px-3 rounded hover:text-gray-900">Login</a>
-                <a href="" class="py-3 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 rounded hover:text-yellow-800 transition duration-300">Register</a>
+                <a href="" class="py-5 px-3 rounded hover:text-gray-900">Register</a>
+                <a href="" class="py-3 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 rounded hover:text-yellow-800 transition duration-300 font-bold">Post Ads!</a>
               </div>
               {/* Mobile Nav */}
               <div class="md:hidden flex items-center">
@@ -78,7 +91,7 @@ export default function Layout({ children, home }) {
         </nav>
         {home ? (
           <>
-            <Image
+            {/* <Image
               priority
               src="/images/profile.jpeg"
               className={utilStyles.borderCircle}
@@ -86,11 +99,11 @@ export default function Layout({ children, home }) {
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
           </>
         ) : (
           <>
-            <Link href="/">
+            {/* <Link href="/">
               <a>
                 <Image
                   priority
@@ -106,7 +119,7 @@ export default function Layout({ children, home }) {
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
-            </h2>
+            </h2> */}
           </>
         )}
       </header>
